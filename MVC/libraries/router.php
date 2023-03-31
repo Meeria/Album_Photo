@@ -33,4 +33,8 @@ function url($ctrl, $action, $param=[]){
 	return base()."/".$ctrl."/".$action."/".implode("/",$param);
 }
 
+function root() {
+	return str_replace("/index.php", "", $_SERVER["SCRIPT_FILENAME"]);
+}
+
 ?>

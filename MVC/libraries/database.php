@@ -123,4 +123,29 @@ function del($nomTable, $param) {
 	return query($sql);
 }
 
+
+
+function addUser($loginUser, $pswdUser) {
+	$sql = "INSERT INTO users (login, password) VALUES ('" .$loginUser. "', '" .$pswdUser. "')";
+	$result = query($sql);
+	return $result;
+}
+
+function userConnect($loginUser, $pswdUser){
+	$erreur = "Votre login ou mot de passe est incorect";
+	$loginUser = $_POST['login'];
+    $pswdUser = $_POST['password'];
+	$sql = "SELECT * FROM users WHERE login='".$loginUser."' AND password='".$pswdUser."'";
+
+	if ($user=select($sql, 1)) {
+		$_SESSION['login'] = $loginUser;
+		$_SESSION['admin'] = $user['admin'];
+		return	true;
+	} else {
+		return false;
+	}
+}
+
+
+
 ?>

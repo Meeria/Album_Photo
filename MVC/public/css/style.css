@@ -17,7 +17,7 @@ nav {
 
 h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 20px;
     color: purple;
     font-size: 50px;
 }
@@ -32,7 +32,7 @@ img {
     height: 300px;
     border-radius: 7px;
     border: 3px solid yellow;
-    transition: 0.7s;
+    transition: 0.4s;
     margin-bottom: 30px;
     margin: 20px;
 }
@@ -45,19 +45,49 @@ a {
 }
 
 img:hover {
-    width: 450px;
-    height: 350px;
+    width: 460px;
+    height: 360px;
     cursor: pointer;
 }
 
 main {
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-around;
     align-items: baseline;
 }
 
+form {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    color: purple;
+    font-size: 50px;
+}
+
+.outils {
+    text-align: right;
+    margin-right: 20%;
+}
+
+.user {
+    margin-left: 100px;
+    color: white;
+    text-shadow: -2px -2px 0 cyan, 2px 2px 0 magenta;
+    ;
+}
+
 #actif {
     border-bottom: 3px solid purple;
+}
+
+i {
+    color: yellow
 }
